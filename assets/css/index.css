@@ -1,0 +1,762 @@
+@charset "utf-8";
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+}
+html,body{
+    width: 100%;
+    height: 100%;
+}
+a{
+    text-decoration: none;
+}
+@media all and (max-width:575px){
+    nav.safemobilenav{
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-orient: horizontal;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: row;
+                flex-direction: row;
+        -ms-flex-wrap: wrap;
+            flex-wrap: wrap;
+        background-color: rgb(39, 34, 99);
+        padding: 22px;
+    }
+    nav.safemobilenav a:nth-of-type(2){
+        margin-left: auto;
+        color: white;
+        scale: 1.5;
+        -ms-flex-item-align: center;
+            -ms-grid-row-align: center;
+            align-self: center;
+    }
+    nav.safemobilenav a:nth-of-type(3){
+        color: white;
+        margin-left: 20px;
+        scale: 1.5;
+        -ms-flex-item-align: center;
+            -ms-grid-row-align: center;
+            align-self: center;
+
+    }
+    nav.safemobilenav a:nth-of-type(4){
+        color: white;
+        margin-left: 20px;
+        scale: 1.5;
+        -ms-flex-item-align: center;
+            -ms-grid-row-align: center;
+            align-self: center;
+    }
+    div.landingpage{
+        margin-top: 0px;
+        width: 100%;
+        color: white;
+        background-color: rgb(39, 34, 99);
+        font-family: Noto Sans;
+        background-image: url(../images/hero-card.svg);
+        background-position: bottom;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-blend-mode: luminosity;
+    }
+    div.fdiv{
+        padding: 10px 20px;
+    }
+    div.fdiv h3{
+        font-size: 20px;
+        font-weight: bold;
+    }
+    div.fdiv h2{
+        margin-top: 5px;
+        font-size: 30px;
+        font-weight: bold;
+    }
+    div.sdiv{
+        margin-top: 20px;
+        padding: 10px 20px;
+    }
+    div.sdiv h2{
+        margin-bottom: 5px;
+        font-size: 15px;
+    }
+    #dapp{
+        background-color: rgb(121, 239, 189);
+        color: black;
+        font-size: 15px;
+        padding: 15px 20px;
+        border: 2px;
+        border-radius: 25px;
+        font-weight: bold;
+        -webkit-box-shadow: 2px 2px 15px rgb(193, 192, 203);
+                box-shadow: 2px 2px 15px rgb(193, 192, 203);
+    }
+    div.tdiv{
+        margin-top: 20px;
+        padding: 20px;
+    }
+    #img1{
+        width: 100%;
+        height: 300px;
+    }
+    div.content{
+        width: 100%;
+        color: black;
+        margin-top: 30px;
+        font-family: Noto Sans;
+    }
+    div.content1{
+        padding: 20px;
+    }
+    div.content h2{
+        text-align: center;
+        text-transform: uppercase;
+        font-size: 25px;
+        color: rgb(59, 56, 56);
+        line-height: 1;
+        margin-bottom: 25px;
+    }
+    div.content ul{
+        font-size: 12px;
+        color: rgb(77, 74, 74);
+        margin-left: 30px;
+        margin-bottom: 10px;
+        line-height: 2;
+    }
+    div.enable{
+        width: -webkit-fit-content;
+        width: -moz-fit-content;
+        width: fit-content;
+        margin: 20px auto;
+        -webkit-animation-name: enab;
+                animation-name: enab;
+        -webkit-animation-duration: 2s;
+                animation-duration: 2s;
+        -webkit-animation-direction: alternate;
+                animation-direction: alternate;
+        -webkit-animation-iteration-count: infinite;
+                animation-iteration-count: infinite;
+    }
+    @-webkit-keyframes enab{
+        0%{
+            scale: 0.8;
+        }
+        100%{
+            scale: 1;
+        }
+       }
+    @keyframes enab{
+        0%{
+            scale: 0.8;
+        }
+        100%{
+            scale: 1;
+        }
+       }
+    #enable{
+        background-color: rgb(121, 239, 189);
+        color: black;
+        font-size: 15px;
+        padding: 20px 30px;
+        border: 2px;
+        border-radius: 40px;
+        font-weight: bold;
+        -webkit-box-shadow: 1px 2px 15px rgb(39, 34, 99);
+                box-shadow: 1px 2px 15px rgb(39, 34, 99);
+        text-align: center;
+    }
+    div.content2{
+        margin-top: 30px;
+        padding: 20px;
+    }
+    #img2{
+        width: 100%;
+        height: 300px;
+    }
+    div.main{
+        width: 100%;
+        height: 550px;
+        background-color: rgb(74, 33, 239);
+        color: white;
+        margin-top: 10%;
+        font-family: Noto Sans;
+       }
+       div.main1{
+        width: -webkit-fit-content;
+        width: -moz-fit-content;
+        width: fit-content;
+        margin: 0 auto;
+        -webkit-animation-name: extend;
+                animation-name: extend;
+        -webkit-animation-duration: 1.5s;
+                animation-duration: 1.5s;
+        -webkit-animation-direction: alternate;
+                animation-direction: alternate;
+        -webkit-animation-iteration-count: infinite;
+                animation-iteration-count: infinite;
+       }
+       @-webkit-keyframes extend{
+        from{
+            position: relative;
+            top: 0;
+        }
+        to{
+            position: relative;
+            top: 5%;
+        }
+       }
+       @keyframes extend{
+        from{
+            position: relative;
+            top: 0;
+        }
+        to{
+            position: relative;
+            top: 5%;
+        }
+       }
+       #extension{
+        width: 100px;
+        margin-top: 20%;
+       }
+       div.main2{
+        width: 100%;
+        margin-top: 20px;
+       }
+       div.main2 h2{
+        font-size: 40px;
+        text-align: center;
+        padding: 10px;
+        line-height: 1;
+       }
+       div.main2 p{
+        font-size: 12px;
+        text-align: center;
+        padding: 10px;
+       }
+       div.main3{
+        width: -webkit-fit-content;
+        width: -moz-fit-content;
+        width: fit-content;
+        margin: 40px auto;
+        -webkit-animation-name: with;
+                animation-name: with;
+        -webkit-animation-duration: 2s;
+                animation-duration: 2s;
+        -webkit-animation-direction: alternate;
+                animation-direction: alternate;
+        -webkit-animation-iteration-count: infinite;
+                animation-iteration-count: infinite;
+       }
+       @-webkit-keyframes with{
+        0%{
+            scale: 0.8;
+        }
+        100%{
+            scale: 1;
+        }
+       }
+       @keyframes with{
+        0%{
+            scale: 0.8;
+        }
+        100%{
+            scale: 1;
+        }
+       }
+       #withdraw{
+        background-color: rgb(121, 239, 189);
+        color: rgb(44, 43, 43);
+        font-size: 15px;
+        padding: 20px 30px;
+        border: 2px;
+        border-radius: 40px;
+        font-weight: bold;
+        -webkit-box-shadow: 2px 2px 15px rgb(193, 192, 203);
+                box-shadow: 2px 2px 15px rgb(193, 192, 203);
+       }
+    .fa-bitcoin{
+        color: rgb(75,32,239);
+        scale: 2;
+        margin-left: 20px;
+        -ms-flex-item-align: center;
+            -ms-grid-row-align: center;
+            align-self: center;
+        margin-top: 15px;
+    }
+    div.enablewithdrawal{
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-orient: horizontal;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: row;
+                flex-direction: row;
+        -webkit-box-pack: start;
+            -ms-flex-pack: start;
+                justify-content: flex-start;
+        margin-top: 0px;
+        }
+    .enablebody{
+        background-color: rgb(184,169,252);
+        background-repeat: no-repeat;
+        background-size: cover;  
+        font-family: Noto Sans;
+
+    }
+    .withdrawalbody{
+        background-color: rgb(184,169,252);
+        background-repeat: no-repeat;
+        background-size: cover;  
+        font-family: Noto Sans;
+
+    }
+    .fa-square-rss{
+        scale: 3.5;
+        color: black;
+        -ms-flex-item-align: center;
+            -ms-grid-row-align: center;
+            align-self: center;
+    }
+    div.withdrawal{
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: column;
+                flex-direction: column;
+    }
+    div.withdrawal h2{
+        scale: 0.85;
+        color:rgb(75,32,239);
+        font-weight: 650;
+        text-align: center;
+        margin-top: 0px;
+        text-wrap: wrap;
+    }
+    div.withdrawallogos{
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-orient: horizontal;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: row;
+                flex-direction: row;
+        -ms-flex-wrap: wrap;
+            flex-wrap: wrap;
+        -webkit-box-pack: justify;
+            -ms-flex-pack: justify;
+                justify-content: space-between;
+        margin-left: 35px;
+        margin-right: 35px;
+    }
+    div.withdrawallogos img:nth-of-type(2){
+        border-radius: 50%;
+    }
+    div.enablewithdrawal h2{
+        scale: 0.9;
+        color:rgb(75,32,239);
+        font-weight: 650;
+    }
+
+    .downloadenable{
+        color: rgb(13,10,50);
+    }
+    .paragraphonenable{
+        padding: 0px 35px;
+    }
+    .paragraphonenable p{
+        font-size: 1.2rem;
+        text-align: justify;
+        text-wrap: wrap;
+    }
+    .withdrawalpara{
+        font-size: 1.2rem;
+        text-align: left;
+        text-wrap: wrap;
+        font-weight: 600;
+        padding: 0px 35px;
+        margin-top: 20px;
+    }
+    .withdrawalform{
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: column;
+                flex-direction: column;
+        -ms-flex-wrap: wrap;
+            flex-wrap: wrap;
+        font-family: Noto Sans;
+    }
+    .cashapptag{
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: column;
+                flex-direction: column;
+    }
+    .Amount{
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: column;
+                flex-direction: column;
+    }
+    .cashapp{
+        font-weight: 650;
+        color: rgb(75,32,239);
+    }
+    .formwithdrawalpara{
+        font-size: 13px;
+        font-family: Noto Sans;
+    }
+    .limit{
+        font-weight: 600;
+        color: rgb(75,32,239);
+    }
+    form{
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -ms-flex-wrap: wrap;
+            flex-wrap: wrap;
+        -webkit-box-orient: horizontal;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: row;
+                flex-direction: row;
+        margin-top: 20px;
+        padding: 10px 30px ;
+
+    }
+    form > *{
+        -webkit-box-flex: 1;
+            -ms-flex: 1 1 50%;
+                flex: 1 1 50%;
+    }
+    form > div.info:nth-of-type(3){
+        -ms-flex-preferred-size: 100%;
+            flex-basis: 100%;
+
+    }
+    form .info{
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: column;
+                flex-direction: column;
+    }   
+    form > button{
+        margin-top: 30px;
+        color: white;
+        background-color:rgb(75,32,239);
+        -webkit-box-shadow: 2px 2px 15px rgba(243, 241, 241, 0.785);
+                box-shadow: 2px 2px 15px rgba(243, 241, 241, 0.785);
+    }
+    form > button:hover{
+        background-color:rgba(73, 32, 239, 0.674);
+    
+    }
+    div.enablenotes{
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: column;
+                flex-direction: column;
+        -ms-flex-wrap: wrap;
+            flex-wrap: wrap;
+        padding: 0px 35px;
+        padding-bottom: 20px;
+    }
+    div.enablenotes p{
+        font-size: 1.1rem;
+        text-align: justify;
+        text-wrap: wrap;
+        margin-top: 20px;
+        font-family: Noto Sans;
+
+    }
+    .fa-circle-exclamation{
+        color: red;
+    }
+    
+    .footerhrenable{
+        margin-top: 70px;
+    }
+    div.stages{
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: column;
+                flex-direction: column;
+    }
+    div.checks{
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-orient: horizontal;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: row;
+                flex-direction: row;
+        -ms-flex-wrap: wrap;
+            flex-wrap: wrap;
+        -ms-flex-pack: distribute;
+            justify-content: space-around;
+    }
+    div.linesincheck{
+        background-color: green;
+        width: 140px;
+        height: 2px;
+        -ms-flex-item-align: center;
+            -ms-grid-row-align: center;
+            align-self: center;
+    }
+    div.infocheck{
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-orient: horizontal;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: row;
+                flex-direction: row;
+        -ms-flex-wrap: wrap;
+            flex-wrap: wrap;
+        -webkit-box-pack: justify;
+            -ms-flex-pack: justify;
+                justify-content: space-between;
+    }
+    div.infocheck P{
+        font-size: 15px;
+        text-align: center;
+        font-family: Noto Sans;
+    }
+    div.success{
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: column;
+                flex-direction: column;
+        -webkit-box-align: center;
+            -ms-flex-align: center;
+                align-items: center;
+    }
+    div.withdrawalsummary{
+        padding-top: 50px;
+        font-family: Noto Sans;
+    }
+   .fa-circle-check{
+    color: green;
+   }
+   .verificationcheck{
+    color: black;
+   }
+   .stagespara{
+    text-align: center;
+    font-size: 1.4rem;
+    font-weight: 500;
+    margin-bottom: 20px;
+    margin-top: 20px;
+    font-family: Noto Sans;
+   }
+   .successfulcheck{
+    font-size: 4rem;
+   }
+   .withdrawalsuccessful{
+    font-size: 1.5rem;
+    font-weight: 900;
+   }
+   .transactiondetails{
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    gap: 10px;
+    padding-bottom: 30px;
+   }
+   div.transactiondetails div{
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+   }
+
+   .withdrawalfooternote{
+    margin-top: 60px;
+    padding: 0px 15px;
+    text-align: center;
+    color: rgba(0, 0, 0, 0.728);
+    font-weight: 640;
+   }
+   .transactionh2{
+    text-align: center;
+    font-size: 1.6rem;
+   }
+   .hrwithdraw{
+    margin-top: 20px;
+   }
+   div.home{
+    position: fixed;
+    bottom: 2px;
+    left: 10px;
+    background-color: rgb(184,169,252);
+    padding: 10px;
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
+    border-radius: 10px;
+    -webkit-box-shadow: 2px 2px 10px black;
+            box-shadow: 2px 2px 10px black;
+   }
+   div.home a{
+    color: white;
+    text-decoration: none;
+    border: none;
+   }
+   .home:active{
+    background-color: black;
+    text-decoration: none;
+   }
+   div.footer{
+    background-color: rgb(23, 17, 73);
+    font-family: Noto Sans;
+    padding: 20px;
+    position: relative;
+   }
+   div.footer h2{
+    font-size: 15px;
+    color: white;
+    line-height: 2;
+    font-weight: bold;
+   }
+   div.footer p{
+    font-size: 11px;
+    color: rgb(228, 222, 222);
+    line-height: 2;
+   }
+   div.about{
+    position: absolute;
+    right: 0;
+    top: 0;
+    translate: -70% 15%;
+   }
+   div.legal{
+    position: absolute;
+    right: 0;
+    top: 45%;
+    translate: -45%;
+   }
+   div.copy{
+    margin-top: 30px;
+   }
+   span{
+    color: rgb(207, 197, 197);
+   }
+   .enable-footer{
+    background-color:  rgb(184,169,252);
+   }
+   .enablesummary{
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    gap: 50px;
+    padding-top: 70px;
+   }
+   .enableheading{
+    padding: 0px 35px;
+    text-align: center;
+    font-size: 1.3rem;
+    font-weight: 800;
+    font-display: uppercase;
+    text-transform: uppercase;
+    color: rgb(23, 17, 73);
+}
+.enablesummary i{
+    scale: 2.5;
+    color: rgb(75,32,239);
+}
+#username{
+       color:  rgb(75,32,239);
+       
+    }
+#emailaddress{
+       color:  rgb(75,32,239);
+
+   }
+#withdrawnamount{
+    color: black;
+    font-weight: 650;
+    
+}
+#tag{
+    color: black;
+    font-weight: 650;
+
+
+}
+   .enablesummarypara{
+    padding: 0px 35px;
+    font-size: 1.1rem;
+    margin-top: 20px;
+    text-align: center;
+    font-weight: 400;
+   }
+   .home2{
+    color: white;
+    background-color:rgb(75,32,239);
+    -webkit-box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.861);
+            box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.861);
+    padding: 10px 12px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    max-width: 80%;
+    margin-top: 4vh;
+    margin-left: 10%;
+    margin-right: 10%;
+    border-radius: 10px;
+   }
+}
